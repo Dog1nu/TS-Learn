@@ -11,11 +11,12 @@ export function CatImage({url}: CatImageProps){
     setImageUrl("");
     const image = await fetchImage();
     setImageUrl(image.url);
-  }
+  };
+
   return(
     <div>
       <button onClick={refreshImage}>ほかのにゃんこも見る</button>
       {imageUrl &&<img src={url}/>}
     </div>
-  )
+  );
 }
